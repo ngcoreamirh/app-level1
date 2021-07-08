@@ -1,0 +1,49 @@
+@import 'assets/styles/_colors';
+// فایل رنگ هامون رو ایمپورت میکنیم
+
+
+// تو این فایل معمولا استایل های سراسری رو تعریف یا ایمپورت میکنیم
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+    font-family: tahoma;
+}
+body {
+    height: 100vh;
+    line-height: 25px;
+    padding: 0px;
+    margin: 0px;
+    background-color: $Black;
+    background-image: url('./assets/images/as-icon.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px 70px;
+}
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+mark {
+    padding: 3px 5px;
+    border-radius: 8px;
+    background-color: $Cherry_Red;
+    color: $White;
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 575px) {
+    body {
+        font-size: 12px;
+        background-image: unset;
+    }
+}
