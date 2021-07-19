@@ -6,7 +6,7 @@
 // مقداردهی کردیم rem
 // 1rem = html font size
 
-.wellcome {
+header {
     background:linear-gradient(to left,$Black,$Gray,$Black);
     box-shadow: 1px 1px 3px $Black;
     padding: 10px 20px 10px 20px;
@@ -24,8 +24,8 @@
     #author-image {
         position: absolute;
         top: 20px;
-        width: 105px;
-        height: 105px;
+        width: 100px;
+        height: 100px;
         background: url('/assets/images/logo-thumb.png');
         background-position: center;
         background-repeat: no-repeat;
@@ -51,27 +51,44 @@
             color: $Yellow;
         }
         .link-wrapper {
-            text-align: center;
-            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
             .link {
                 display: inline-flex;
                 flex-wrap: wrap;
                 align-items: center;
-                color: $Gray;
-                background-color: $White;
-                padding: 0px 15px 2px 15px;
-                border-radius: 32px;
-                img {
-                    width: 40px;
-                    height: 40px;
-                }
+                color: $Light_Gray;
+                gap: 10px;
                 a {
-                    color: $Blue;
                     transition: .2s !important;
-                    &:hover {
-                        margin: 0px 5px 0px 5px;
+                    font-size: .8rem;
+                    background-color: $Dark_Gray;
+                    padding: 0px 25px 3px 25px;
+                    border-radius: 9px;
+                    
+                    &:nth-child(1) {
+                        &:hover {
+                            background-color: $Blue;
+                            color: $White;
+                        }
+                    }
+                    &:nth-child(2) {
+                        &:hover {
+                            background-color: $White;
+                            color: $Black;
+                        }
+                    }
+                    &:nth-child(3) {
+                        &:hover {
+                            background-color: $White;
+                            color: $Blue;
+                        }
                     }
                 }
+                
+               
             }
         }
     }  
@@ -105,7 +122,7 @@
 }
 
 @media screen and (max-width: 575px) {
-    .wellcome {
+    header {
         margin: 0;
         #author-image {
           width: 85px;
@@ -113,16 +130,6 @@
           position: relative !important;
           top: 0;
           margin: 10px auto;
-        }
-        .main {
-            .link-wrapper {
-                .link {
-                    img {
-                        width: 30px;
-                        height: 30px;
-                    }
-                }
-            }
         }
     }
 
